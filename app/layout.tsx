@@ -1,6 +1,7 @@
 import './globals.css';
 
 export const metadata = {
+    metadataBase: new URL('https://hosteria-santa-petrona.vercel.app'),
     title: 'Hostería Santa Petrona - Descanso Campestre a 15 Min de Quito | Piscinas Temperadas',
     description: 'Hostería Santa Petrona en Catzhuquí de Velasco, Quito. Piscina olímpica cubierta y temperada, entorno natural único. Desde $20 por persona. A solo 15 minutos del Condado Shopping.',
     keywords: 'hostería Quito, piscina temperada Quito, descanso campestre, Catzhuquí de Velasco, hospedaje natural Quito, microaventura Ecuador',
@@ -10,13 +11,13 @@ export const metadata = {
     openGraph: {
         title: 'Hostería Santa Petrona - Descanso Campestre a 15 Min de Quito',
         description: 'Disfruta de nuestra piscina olímpica cubierta y temperada en un entorno natural único. Desde $20 por persona.',
-        url: 'https://hosteriasantapetrona.com/',
+        url: 'https://hosteria-santa-petrona.vercel.app',
         siteName: 'Hostería Santa Petrona',
         images: [
             {
                 url: '/logo.jpg',
-                width: 1200,
-                height: 630,
+                width: 800,
+                height: 800,
                 alt: 'Logo Hostería Santa Petrona',
             },
         ],
