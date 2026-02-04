@@ -5,12 +5,51 @@
     padding-top: 100px;
     padding-bottom: var(--spacing-3xl);
     background-color: var(--color-cafe);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%), url('/hero-placeholder.png');
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
     color: white;
+    /* Back to white for contrast on images */
+}
+
+.highlight {
+    color: var(--color-ocre);
+    font-weight: 800;
+}
+
+.descriptionWhite {
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.bgWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bgLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+    z-index: 1;
 }
 
 .heroGrid {
@@ -19,7 +58,7 @@
     gap: var(--spacing-2xl);
     align-items: center;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -31,13 +70,14 @@
 
 .heroContent {
     animation-delay: 0.1s;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.4);
+    /* Darker, more transparent */
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .promoColumn {
@@ -52,22 +92,22 @@
     color: #ffffff;
     margin-bottom: var(--spacing-md);
     line-height: 1.1;
-    text-shadow: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .subtitle {
     font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-    color: #ffffff;
+    color: #ffffff !important;
+    /* Pure white for maximum visibility */
     margin-bottom: var(--spacing-lg);
     line-height: 1.6;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     font-weight: 500;
 }
 
 .subtitle strong {
-    color: var(--color-dorado);
+    color: var(--color-ocre);
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .readMoreBtn {
@@ -78,7 +118,6 @@
     padding: 0;
     cursor: pointer;
     margin-left: 0.5rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .readMoreBtn:hover {
@@ -94,14 +133,14 @@
 }
 
 .promoCard {
-    background: rgba(20, 20, 20, 0.4);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     text-align: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.6s ease forwards;
     animation-delay: 0.3s;
     width: 100%;
@@ -114,14 +153,12 @@
     color: var(--color-ocre);
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .promoText {
-    color: #ffffff;
+    color: white;
     margin-bottom: var(--spacing-lg);
     font-size: 1.125rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .features {
@@ -129,7 +166,7 @@
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: var(--spacing-md);
     padding-top: var(--spacing-md);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .feature {
@@ -138,13 +175,11 @@
     gap: 0.5rem;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    color: white;
 }
 
 .featureIcon {
     font-size: 1.5rem;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 767px) {
@@ -155,5 +190,9 @@
     .heroGrid {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
+    }
+
+    .bgOverlay {
+        background: rgba(0, 0, 0, 0.4);
     }
 }

@@ -36,8 +36,8 @@ export default function Header() {
                     {/* Logo */}
                     <div className={styles.logo}>
                         <Image
-                            src="/logo.jpg"
-                            alt="Hostería Santa Petrona"
+                            src="/logo.png"
+                            alt="Hostería Santa Petrona - Hostería en Quito Norte"
                             width={60}
                             height={60}
                             className={styles.logoImg}
@@ -48,13 +48,13 @@ export default function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
-                        <a onClick={() => scrollToSection('servicios')} className={styles.navLink}>
+                        <a onClick={() => scrollToSection('servicios-habitaciones')} className={styles.navLink} title="Ver servicios de bienestar y spa">
                             Servicios de Bienestar
                         </a>
-                        <a onClick={() => scrollToSection('habitaciones')} className={styles.navLink}>
+                        <a onClick={() => scrollToSection('servicios-habitaciones')} className={styles.navLink} title="Conocer habitaciones y tarifas">
                             Habitaciones y Tarifas
                         </a>
-                        <a onClick={() => scrollToSection('ubicacion')} className={styles.navLink}>
+                        <a onClick={() => scrollToSection('ubicacion')} className={styles.navLink} title="Nuestra ubicación en Quito">
                             Ubicación
                         </a>
                     </nav>

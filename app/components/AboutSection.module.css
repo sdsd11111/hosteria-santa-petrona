@@ -243,12 +243,14 @@
     /* Span full width */
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-3xl);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
     opacity: 1;
     transform: none;
     transition: all 0.8s ease-out 0.4s;
     width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
 }
 
 @media (min-width: 1024px) {
@@ -261,7 +263,7 @@
     background-color: var(--color-blanco-hueso);
     border: 1px solid rgba(212, 165, 116, 0.3);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     display: flex;
@@ -280,16 +282,16 @@
 }
 
 .mvvIcon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .mvvTitle {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--color-cafe);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     font-weight: 700;
 }
 

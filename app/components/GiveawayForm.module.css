@@ -1,0 +1,260 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.modal {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-2xl);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+    padding-bottom: var(--spacing-lg);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 2rem;
+    color: var(--color-gray-400);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+    color: var(--color-ocre);
+}
+
+.progressContainer {
+    height: 5px;
+    background: #f1f1f1;
+    width: 100%;
+}
+
+.progressBar {
+    height: 100%;
+    background: var(--color-ocre);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formContent {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepWrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.stepCounter {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-ocre);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.questionText {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--color-cafe);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.3;
+}
+
+/* Form Elements */
+.textInput,
+.selectInput {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 2px solid #f1f1f1;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    color: var(--color-cafe);
+    outline: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.textInput:focus,
+.selectInput:focus {
+    border-color: var(--color-ocre);
+    background: white;
+    box-shadow: 0 4px 12px rgba(212, 165, 116, 0.1);
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.prefix {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    color: var(--color-gray-600);
+    font-size: 1rem;
+}
+
+.birthdayGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-sm);
+}
+
+.nextBtn {
+    width: 100%;
+    background: var(--color-cafe);
+    color: white;
+    border: none;
+    padding: 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.2);
+}
+
+.nextBtn:hover:not(:disabled) {
+    background: var(--color-ocre);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 165, 116, 0.3);
+}
+
+.nextBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--color-gray-400);
+}
+
+.optionsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+}
+
+.optionBtn {
+    background: #fafafa;
+    border: 1px solid #f1f1f1;
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--color-cafe);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+}
+
+.optionBtn:hover {
+    border-color: var(--color-ocre);
+    background: white;
+    transform: translateX(5px);
+}
+
+.optionIcon {
+    font-size: 1.5rem;
+}
+
+.activeOption {
+    border-color: var(--color-ocre);
+    background: rgba(212, 165, 116, 0.05);
+    color: var(--color-ocre);
+}
+
+/* Success Styles */
+.successWrapper {
+    text-align: center;
+}
+
+.successIcon {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.successTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    color: var(--color-cafe);
+    margin-bottom: 1rem;
+}
+
+.successText {
+    font-size: 1.15rem;
+    color: var(--color-gray-600);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.successNote {
+    font-size: 0.9rem;
+    color: var(--color-ocre);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.finishBtn {
+    background: var(--color-cafe);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.finishBtn:hover {
+    background: var(--color-ocre);
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .modal {
+        max-width: 100%;
+        border-radius: 24px 24px 0 0;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .formContent {
+        min-height: 480px;
+        padding: var(--spacing-xl);
+    }
+
+    .questionText {
+        font-size: 1.5rem;
+    }
+}

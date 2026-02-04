@@ -28,14 +28,13 @@ export default function VideoExperience() {
                     <video
                         ref={videoRef}
                         className={styles.video}
-                        poster="/video_poster.png" // Generated poster
+                        poster="/images/hero-2.webp" // Optimized poster choice from user feedback
                         loop
-                        muted // Autoplay text requires muted usually, but user asked for muted loop
+                        muted
                         playsInline
                         onClick={handlePlayClick}
                     >
-                        {/* Placeholder video source - replace with actual local file later */}
-                        <source src="https://media.istockphoto.com/id/1360655297/video/swimming-pool.mp4?s=mp4-640x640-is&k=20&c=L_F1r1JtUo7n6qF9f0e1d8c7b6a5Z3x2y1w0v9u8t7s=" type="video/mp4" />
+                        <source src="/videos/video.mp4" type="video/mp4" />
                         Tu navegador no soporta el elemento de video.
                     </video>
 
@@ -46,7 +45,7 @@ export default function VideoExperience() {
                                 Vive la Experiencia Santa Petrona en Catzhuquí de Velasco
                             </h2>
                             <p className={styles.description}>
-                                Descubre por qué somos el destino preferido para el turismo de proximidad en el norte de Quito. Desde nuestra piscina olímpica temperada hasta cabalgatas por senderos ecológicos, el sol siempre brilla en nuestro refugio campestre.
+                                Descubre nuestro refugio natural a solo 15 minutos del norte de Quito.
                             </p>
                         </div>
                     </div>

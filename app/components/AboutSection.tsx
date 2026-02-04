@@ -56,8 +56,8 @@ export default function AboutSection() {
 
                         <div className={styles.mainImageWrapper}>
                             <Image
-                                src="/about-fachada.png"
-                                alt="Hostería Santa Petrona Fachada"
+                                src="/images/somos-1.webp"
+                                alt="Hostería Santa Petrona - El mejor lugar donde hospedarse en Quito Norte"
                                 fill
                                 className={styles.image}
                             />
@@ -68,8 +68,8 @@ export default function AboutSection() {
 
                         <div className={styles.secondaryImageWrapper}>
                             <Image
-                                src="/about-piscina.png"
-                                alt="Piscina Olímpica Temperada"
+                                src="/images/somos-2.webp"
+                                alt="Piscina temperada y áreas verdes en Hostería Santa Petrona Quito"
                                 fill
                                 className={styles.image}
                             />
@@ -77,8 +77,8 @@ export default function AboutSection() {
 
                         <div className={styles.tertiaryImageWrapper}>
                             <Image
-                                src="/about-senderos.png"
-                                alt="Senderos Ecológicos"
+                                src="/images/somos-3.webp"
+                                alt="Habitaciones campestres y descanso natural en Catzhuquí de Velasco"
                                 fill
                                 className={styles.image}
                             />
@@ -108,7 +108,12 @@ export default function AboutSection() {
                             ))}
                         </div>
 
-                        <button className={styles.galleryBtn}>
+                        <button
+                            className={styles.galleryBtn}
+                            onClick={() => {
+                                document.getElementById('servicios-habitaciones')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
                             Ver galería de experiencias
                         </button>
                     </div>

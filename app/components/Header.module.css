@@ -45,9 +45,16 @@
 .logoText {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--color-cafe);
+    font-weight: 700;
+    color: #ffffff;
+    /* Strong white initially */
     display: none;
+    transition: color var(--transition-base);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.scrolled .logoText {
+    color: var(--color-cafe);
 }
 
 @media (min-width: 768px) {
@@ -68,13 +75,19 @@
 }
 
 .navLink {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9375rem;
-    color: var(--color-cafe);
+    color: #ffffff;
+    /* Strong white initially */
     position: relative;
     padding: 0.5rem 0;
     cursor: pointer;
-    transition: color var(--transition-fast);
+    transition: color var(--transition-base);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.scrolled .navLink {
+    color: var(--color-cafe);
 }
 
 .navLink::after {
@@ -137,8 +150,13 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--color-cafe);
+    background: #ffffff;
     transition: all var(--transition-base);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.scrolled .menuIcon {
+    background: var(--color-cafe);
 }
 
 .menuIcon::before,
@@ -147,7 +165,8 @@
     position: absolute;
     width: 24px;
     height: 2px;
-    background: var(--color-cafe);
+    background: inherit;
+    /* Use parent background color */
     transition: all var(--transition-base);
 }
 
@@ -173,8 +192,13 @@
     position: absolute;
     width: 24px;
     height: 2px;
-    background: var(--color-cafe);
+    background: #ffffff;
     transition: all var(--transition-base);
+}
+
+.scrolled .menuIconClose::before,
+.scrolled .menuIconClose::after {
+    background: var(--color-cafe);
 }
 
 .menuIconClose::before {

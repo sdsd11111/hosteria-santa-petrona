@@ -1,6 +1,39 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import styles from './Testimonials.module.css';
+
+function CountUp({ end, duration = 2, decimals = 0 }: { end: number, duration?: number, decimals?: number }) {
+    const [count, setCount] = useState(0);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    useEffect(() => {
+        if (isInView) {
+            let start = 0;
+            const stepTime = 50;
+            const steps = (duration * 1000) / stepTime;
+            const increment = (end - start) / steps;
+
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    setCount(end);
+                    clearInterval(timer);
+                } else {
+                    setCount(current);
+                }
+            }, stepTime);
+
+            return () => clearInterval(timer);
+        }
+    }, [isInView, end, duration]);
+
+    return <span ref={ref}>{count.toFixed(decimals)}</span>;
+}
 
 interface Testimonial {
     id: number;
@@ -60,14 +93,57 @@ export default function Testimonials() {
 
                 {/* Header Section with Trust Signals */}
                 <div className={styles.header}>
-                    <div className={styles.trustBadge}>
-                        <div className={styles.googleIcon}>G</div>
+                    <motion.div
+                        className={styles.trustBadge}
+                        initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <motion.div
+                            className={styles.googleIcon}
+                            initial={{ rotate: -180, scale: 0 }}
+                            animate={{ rotate: 0, scale: 1 }}
+                            transition={{ type: 'spring', damping: 10, stiffness: 100, delay: 0.3 }}
+                        >
+                            G
+                        </motion.div>
                         <div className={styles.ratingInfo}>
-                            <span className={styles.ratingScore}>4.2</span>
-                            <div className={styles.stars}>★★★★★</div>
-                            <span className={styles.reviewCount}>72 opiniones en Google</span>
+                            <motion.span
+                                className={styles.ratingScore}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.5 }}
+                            >
+                                <CountUp end={4.2} decimals={1} duration={1.5} />
+                            </motion.span>
+                            <div className={styles.stars}>
+                                {[1, 2, 3, 4, 5].map((star, i) => (
+                                    <motion.span
+                                        key={star}
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{
+                                            delay: 0.6 + (i * 0.1),
+                                            type: 'spring',
+                                            stiffness: 200
+                                        }}
+                                        style={{ display: 'inline-block' }}
+                                    >
+                                        ★
+                                    </motion.span>
+                                ))}
+                            </div>
+                            <motion.span
+                                className={styles.reviewCount}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 1.2 }}
+                            >
+                                <CountUp end={72} duration={2} /> opiniones en Google
+                            </motion.span>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <h2 className={styles.title}>
                         Lo que dicen nuestros huéspedes sobre la calidez de Santa Petrona
