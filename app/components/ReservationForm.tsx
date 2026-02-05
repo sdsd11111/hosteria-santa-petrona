@@ -44,8 +44,9 @@ ${formData.comentarios ? `💬 Comentarios: ${formData.comentarios}` : ''}
             <form onSubmit={handleSubmit}>
                 <div className={styles.formGrid}>
                     <div className={`${styles.inputGroup} ${styles.fullWidth}`}>
-                        <label className={styles.label}>Nombre Completo</label>
+                        <label htmlFor="nombre" className={styles.label}>Nombre Completo</label>
                         <input
+                            id="nombre"
                             type="text"
                             name="nombre"
                             value={formData.nombre}
@@ -57,8 +58,9 @@ ${formData.comentarios ? `💬 Comentarios: ${formData.comentarios}` : ''}
                     </div>
 
                     <div className={styles.inputGroup}>
-                        <label className={styles.label}>Llegada</label>
+                        <label htmlFor="checkIn" className={styles.label}>Llegada</label>
                         <input
+                            id="checkIn"
                             type="date"
                             name="checkIn"
                             value={formData.checkIn}
@@ -69,8 +71,9 @@ ${formData.comentarios ? `💬 Comentarios: ${formData.comentarios}` : ''}
                     </div>
 
                     <div className={styles.inputGroup}>
-                        <label className={styles.label}>Salida</label>
+                        <label htmlFor="checkOut" className={styles.label}>Salida</label>
                         <input
+                            id="checkOut"
                             type="date"
                             name="checkOut"
                             value={formData.checkOut}
@@ -81,8 +84,9 @@ ${formData.comentarios ? `💬 Comentarios: ${formData.comentarios}` : ''}
                     </div>
 
                     <div className={`${styles.inputGroup} ${styles.fullWidth}`}>
-                        <label className={styles.label}>Número de Huéspedes</label>
+                        <label htmlFor="huespedes" className={styles.label}>Número de Huéspedes</label>
                         <select
+                            id="huespedes"
                             name="huespedes"
                             value={formData.huespedes}
                             onChange={handleChange}
@@ -97,8 +101,9 @@ ${formData.comentarios ? `💬 Comentarios: ${formData.comentarios}` : ''}
                     </div>
 
                     <div className={`${styles.inputGroup} ${styles.fullWidth}`}>
-                        <label className={styles.label}>Comentarios o Peticiones Especiales</label>
+                        <label htmlFor="comentarios" className={styles.label}>Comentarios o Peticiones Especiales</label>
                         <textarea
+                            id="comentarios"
                             name="comentarios"
                             value={formData.comentarios}
                             onChange={handleChange}

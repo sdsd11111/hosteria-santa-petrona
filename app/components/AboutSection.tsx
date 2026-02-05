@@ -60,6 +60,8 @@ export default function AboutSection() {
                                 alt="Hostería Santa Petrona - El mejor lugar donde hospedarse en Quito Norte"
                                 fill
                                 className={styles.image}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
                             />
                             <div className={styles.badge}>
                                 <span className={styles.star}>⭐</span> 4.2 en Google Maps
@@ -72,6 +74,7 @@ export default function AboutSection() {
                                 alt="Piscina temperada y áreas verdes en Hostería Santa Petrona Quito"
                                 fill
                                 className={styles.image}
+                                sizes="(max-width: 768px) 100vw, 33vw"
                             />
                         </div>
 
@@ -81,6 +84,7 @@ export default function AboutSection() {
                                 alt="Habitaciones campestres y descanso natural en Catzhuquí de Velasco"
                                 fill
                                 className={styles.image}
+                                sizes="(max-width: 768px) 100vw, 33vw"
                             />
                         </div>
                     </div>

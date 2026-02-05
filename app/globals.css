@@ -6,12 +6,13 @@
   --color-cafe: #5C4033;
   --color-blanco-hueso: #FAF8F3;
   --color-crema: #F5F1E8;
-  
+
   /* Grays for text */
   --color-gray-900: #1a1a1a;
   --color-gray-700: #4a4a4a;
+  --color-gray-600: #595959;
   --color-gray-500: #6b6b6b;
-  
+
   /* Spacing System */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -20,19 +21,19 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
-  
+
   /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(92, 64, 51, 0.08);
   --shadow-md: 0 4px 16px rgba(92, 64, 51, 0.12);
   --shadow-lg: 0 8px 32px rgba(92, 64, 51, 0.16);
   --shadow-xl: 0 16px 48px rgba(92, 64, 51, 0.20);
-  
+
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
@@ -58,7 +59,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
   line-height: 1.2;
@@ -220,7 +226,7 @@ img {
   z-index: 1;
 }
 
-.gradient-overlay > * {
+.gradient-overlay>* {
   position: relative;
   z-index: 2;
 }
@@ -231,6 +237,7 @@ img {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -241,6 +248,7 @@ img {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

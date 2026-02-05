@@ -13,7 +13,8 @@
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 0.875rem;
-    color: var(--color-ocre);
+    font-size: 0.875rem;
+    color: var(--color-cafe);
     letter-spacing: 2.5px;
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -157,7 +158,7 @@
     position: absolute;
     top: var(--spacing-lg);
     right: var(--spacing-lg);
-    background: var(--color-dorado);
+    background: var(--color-cafe);
     color: white;
     padding: 0.5rem 1.25rem;
     border-radius: 50px;

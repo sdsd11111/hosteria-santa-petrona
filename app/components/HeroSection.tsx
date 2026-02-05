@@ -135,7 +135,7 @@ function HeroContent({
                     {/* Right Column - Promo Card */}
                     <div className={`${styles.promoColumn} ${isVisible ? 'animate-fade-in' : ''}`}>
                         <div className={styles.promoCard}>
-                            <h3 className={styles.promoTitle}>¡Gánate una Noche Gratis!</h3>
+                            <h2 className={styles.promoTitle}>¡Gánate una Noche Gratis!</h2>
                             <p className={styles.promoText}>
                                 Rellena los datos y participa por una estadía inolvidable en nuestra hostería.
                             </p>

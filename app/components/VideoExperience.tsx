@@ -24,11 +24,13 @@ export default function VideoExperience() {
             <div className="container-wide">
 
                 {/* Cinematic Video Container */}
-                <div className={styles.videoContainer}>
+                <div className={styles.videoContainer} aria-label="Video promocional de la experiencia en Hostería Santa Petrona">
                     <video
                         ref={videoRef}
                         className={styles.video}
+                        tabIndex={-1}
                         poster="/images/hero-2.webp" // Optimized poster choice from user feedback
+                        preload="none"
                         loop
                         muted
                         playsInline

@@ -29,6 +29,7 @@ export default function Ubicacion() {
                     style={{ border: 0, filter: 'grayscale(0%) contrast(1.1)' }}
                     allowFullScreen
                     loading="lazy"
+                    title="Mapa de ubicación de Hostería Santa Petrona"
                     referrerPolicy="no-referrer-when-downgrade"
                     className={styles.map}
                 ></iframe>
