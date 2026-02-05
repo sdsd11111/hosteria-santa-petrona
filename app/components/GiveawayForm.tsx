@@ -11,6 +11,7 @@ interface FormData {
     diaCumple: string;
     mesCumple: string;
     preferenciaViaje: string;
+    sugerencias: string;
 }
 
 interface GiveawayFormProps {
@@ -38,7 +39,8 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
         email: '',
         diaCumple: '',
         mesCumple: '',
-        preferenciaViaje: ''
+        preferenciaViaje: '',
+        sugerencias: ''
     });
 
     const validateName = (name: string) => {
@@ -62,8 +64,10 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             email: '',
             diaCumple: '',
             mesCumple: '',
-            preferenciaViaje: ''
+            preferenciaViaje: '',
+            sugerencias: ''
         });
+        setTermsAccepted(false);
         setDirection(0);
     };
 
@@ -89,7 +93,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             case 0:
                 return (
                     <div className={styles.stepWrapper}>
-                        <span className={styles.stepCounter}>Paso 1 de 5</span>
+                        <span className={styles.stepCounter}>Paso 1 de 7</span>
                         <h2 className={styles.questionText}>¿Cuál es tu nombre completo?</h2>
                         <input
                             type="text"
@@ -111,10 +115,9 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             case 1:
                 return (
                     <div className={styles.stepWrapper}>
-                        <span className={styles.stepCounter}>Paso 2 de 5</span>
+                        <span className={styles.stepCounter}>Paso 2 de 7</span>
                         <h2 className={styles.questionText}>Dinos tu número de WhatsApp</h2>
                         <div className={styles.inputGroup}>
-                            <span className={styles.prefix}>+593</span>
                             <input
                                 type="tel"
                                 className={styles.textInput}
@@ -139,7 +142,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             case 2:
                 return (
                     <div className={styles.stepWrapper}>
-                        <span className={styles.stepCounter}>Paso 3 de 5</span>
+                        <span className={styles.stepCounter}>Paso 3 de 7</span>
                         <h2 className={styles.questionText}>¿A qué correo te enviamos el premio?</h2>
                         <input
                             type="email"
@@ -161,7 +164,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             case 3:
                 return (
                     <div className={styles.stepWrapper}>
-                        <span className={styles.stepCounter}>Paso 4 de 5</span>
+                        <span className={styles.stepCounter}>Paso 4 de 7</span>
                         <h2 className={styles.questionText}>¿Cuándo es tu cumpleaños?</h2>
                         <div className={styles.birthdayGrid}>
                             <input
@@ -194,7 +197,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             case 4:
                 return (
                     <div className={styles.stepWrapper}>
-                        <span className={styles.stepCounter}>Paso 5 de 5</span>
+                        <span className={styles.stepCounter}>Paso 5 de 7</span>
                         <h2 className={styles.questionText}>¿Con quién sueles viajar más?</h2>
                         <div className={styles.optionsGrid}>
                             {[
@@ -220,6 +223,27 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
             case 5:
                 return (
                     <div className={styles.stepWrapper}>
+                        <span className={styles.stepCounter}>Paso 6 de 7</span>
+                        <h2 className={styles.questionText}>¿Qué te gustaría ver en la Hostería?</h2>
+                        <p className={styles.subText}>Tus sugerencias nos ayudan a mejorar (Opcional)</p>
+                        <textarea
+                            className={styles.textArea}
+                            placeholder="Me gustaría que tuvieran..."
+                            value={formData.sugerencias}
+                            onChange={(e) => handleDataChange('sugerencias', e.target.value)}
+                            autoFocus
+                        />
+                        <button
+                            className={styles.nextBtn}
+                            onClick={nextStep}
+                        >
+                            Siguiente
+                        </button>
+                    </div>
+                );
+            case 6:
+                return (
+                    <div className={styles.stepWrapper}>
                         <span className={styles.stepCounter}>Último paso</span>
                         <h2 className={styles.questionText}>Confirma tu participación</h2>
 
@@ -235,13 +259,23 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                                     He leído y acepto los <a href="/terminos-condiciones" target="_blank" className={styles.link}>Términos y Condiciones</a> y la Política de Privacidad.
                                 </span>
                             </label>
+
+                            <div className={styles.whatsappWarning}>
+                                <span className={styles.warningIcon}>⚠️</span>
+                                <p>
+                                    <strong>Importante:</strong> Los ganadores serán contactados <u>únicamente por WhatsApp</u>.
+                                    Asegúrate de agregar nuestro número a tus contactos para recibir el premio:
+                                    <br />
+                                    <span className={styles.contactNumber}>+593 98 997 4420</span>
+                                </p>
+                            </div>
                         </div>
 
                         <button
                             className={styles.nextBtn}
                             disabled={!termsAccepted}
                             onClick={nextStep}
-                            style={{ marginTop: '2rem' }}
+                            style={{ marginTop: '1rem' }}
                         >
                             ¡Participar en el Sorteo!
                         </button>
@@ -256,7 +290,8 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                             Gracias <strong>{formData.nombre}</strong>. Tus datos han sido registrados para el sorteo de la noche gratis.
                         </p>
                         <p className={styles.successNote}>
-                            Te contactaremos vía WhatsApp o correo electrónico si resultas ganador. 🏨✨
+                            Te contactaremos vía WhatsApp o correo electrónico si resultas ganador.
+                            <br /><strong>Recuerda guardar nuestro número.</strong> 🏨✨
                         </p>
                         <button
                             className={styles.finishBtn}
@@ -304,7 +339,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                     <div className={styles.progressContainer}>
                         <div
                             className={styles.progressBar}
-                            style={{ width: `${(currentStep / 5) * 100}%` }}
+                            style={{ width: `${(currentStep / 7) * 100}%` }}
                         />
                     </div>
 

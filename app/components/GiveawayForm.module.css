@@ -280,6 +280,58 @@
     transform: scale(1.05);
 }
 
+.subText {
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-md);
+    margin-top: -0.5rem;
+}
+
+.textArea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.textArea:focus {
+    outline: none;
+    border-color: var(--color-ocre);
+    background: #fdfdfd;
+}
+
+.whatsappWarning {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.warningIcon {
+    font-size: 1.2rem;
+}
+
+.contactNumber {
+    font-weight: 800;
+    color: #533f03;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
 @media (max-width: 640px) {
     .overlay {
         align-items: center;
