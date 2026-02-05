@@ -43,7 +43,7 @@ export default function Header() {
                             className={styles.logoImg}
                             priority
                         />
-                        <span className={styles.logoText}>Santa Petrona</span>
+                        <span className={styles.logoText}>Hosteria Santa Petrona</span>
                     </div>
 
                     {/* Desktop Navigation */}

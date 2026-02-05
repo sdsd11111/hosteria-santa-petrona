@@ -92,7 +92,7 @@ function HeroContent({
                     {/* Left Column - Content */}
                     <div className={`${styles.heroContent} ${isVisible ? 'animate-fade-in-up' : ''}`}>
                         <h1 className={styles.title}>
-                            <span className={styles.highlight}>Hostería</span> en Quito <span className={styles.highlight}>Santa Petrona</span>: Tu mejor opción de hospedaje en el Norte.
+                            <span className={styles.highlight}>Hostería</span> en Quito <span className={styles.highlight}>Santa Petrona</span><span className={styles.desktopOnly}>: Tu mejor opción de hospedaje en el Norte.</span>
                         </h1>
 
                         <div className={styles.subtitle}>

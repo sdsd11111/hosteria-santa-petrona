@@ -63,6 +63,37 @@
     }
 }
 
+@media (max-width: 767px) {
+    .logoText {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+    }
+
+    .headerContent {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .menuToggle {
+        display: none !important;
+    }
+
+    .nav {
+        display: none !important;
+    }
+
+    .ctaBtn {
+        display: none !important;
+    }
+}
+
 .nav {
     display: none;
     gap: var(--spacing-lg);

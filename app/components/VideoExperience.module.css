@@ -182,19 +182,55 @@
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .videoContainer {
+        aspect-ratio: 4 / 5;
+        border-radius: var(--radius-md);
+    }
+
     .playBtn {
         width: 60px;
         height: 60px;
     }
 
+    .playIcon {
+        font-size: 1.5rem;
+    }
+
     .overlay {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-md);
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .description {
+        font-size: 0.95rem;
     }
 
     .badgesContainer {
-        top: var(--spacing-md);
-        right: var(--spacing-md);
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+        left: var(--spacing-sm);
         flex-direction: row;
-        /* Horizontal on mobile maybe better? or keep stack */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .ctaText {
+        font-size: 1.125rem;
+        padding: 0 var(--spacing-md);
     }
 }

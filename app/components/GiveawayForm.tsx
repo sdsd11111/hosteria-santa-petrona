@@ -23,9 +23,15 @@ const MESES = [
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
 ];
 
+// Validation Regex
+const PHONE_REGEX = /^09\d{8}$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const NAME_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,}$/;
+
 export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
     const [currentStep, setCurrentStep] = useState(0);
     const [direction, setDirection] = useState(0);
+    const [termsAccepted, setTermsAccepted] = useState(false);
     const [formData, setFormData] = useState<FormData>({
         nombre: '',
         whatsapp: '',
@@ -34,6 +40,10 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
         mesCumple: '',
         preferenciaViaje: ''
     });
+
+    const validateName = (name: string) => {
+        return NAME_REGEX.test(name) && name.trim().split(/\s+/).length >= 2;
+    };
 
     const nextStep = () => {
         setDirection(1);
@@ -91,7 +101,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                         />
                         <button
                             className={styles.nextBtn}
-                            disabled={!formData.nombre.trim()}
+                            disabled={!validateName(formData.nombre)}
                             onClick={nextStep}
                         >
                             Siguiente
@@ -110,13 +120,16 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                                 className={styles.textInput}
                                 placeholder="0998877665"
                                 value={formData.whatsapp}
-                                onChange={(e) => handleDataChange('whatsapp', e.target.value)}
+                                onChange={(e) => {
+                                    const val = e.target.value.replace(/\D/g, '');
+                                    if (val.length <= 10) handleDataChange('whatsapp', val);
+                                }}
                                 autoFocus
                             />
                         </div>
                         <button
                             className={styles.nextBtn}
-                            disabled={!formData.whatsapp.trim()}
+                            disabled={!PHONE_REGEX.test(formData.whatsapp)}
                             onClick={nextStep}
                         >
                             Siguiente
@@ -138,7 +151,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                         />
                         <button
                             className={styles.nextBtn}
-                            disabled={!formData.email.includes('@')}
+                            disabled={!EMAIL_REGEX.test(formData.email)}
                             onClick={nextStep}
                         >
                             Siguiente
@@ -202,6 +215,36 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                                 </button>
                             ))}
                         </div>
+                    </div>
+                );
+            case 5:
+                return (
+                    <div className={styles.stepWrapper}>
+                        <span className={styles.stepCounter}>Último paso</span>
+                        <h2 className={styles.questionText}>Confirma tu participación</h2>
+
+                        <div className={styles.termsWrapper}>
+                            <label className={styles.checkboxLabel}>
+                                <input
+                                    type="checkbox"
+                                    checked={termsAccepted}
+                                    onChange={(e) => setTermsAccepted(e.target.checked)}
+                                    className={styles.checkboxInput}
+                                />
+                                <span className={styles.checkboxText}>
+                                    He leído y acepto los <a href="/terminos-condiciones" target="_blank" className={styles.link}>Términos y Condiciones</a> y la Política de Privacidad.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button
+                            className={styles.nextBtn}
+                            disabled={!termsAccepted}
+                            onClick={nextStep}
+                            style={{ marginTop: '2rem' }}
+                        >
+                            ¡Participar en el Sorteo!
+                        </button>
                     </div>
                 );
             default:

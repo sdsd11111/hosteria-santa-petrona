@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './Ubicacion.module.css';
+import ReservationForm from './ReservationForm';
 
 export default function Ubicacion() {
     const handleDireccionesClick = () => {
@@ -89,6 +90,9 @@ export default function Ubicacion() {
                         </p>
                     </div>
                 </div>
+
+                {/* Reservation Form */}
+                <ReservationForm />
             </div>
         </section>
     );

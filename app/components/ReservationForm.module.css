@@ -1,0 +1,108 @@
+.formContainer {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    margin: var(--spacing-2xl) auto 0;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    position: relative;
+    z-index: 20;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: var(--color-cafe);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+    font-weight: 600;
+}
+
+.input,
+.select,
+.textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    color: var(--color-gray-800);
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--color-ocre);
+    box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+    background: white;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submitBtn {
+    background: var(--color-cafe);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: var(--spacing-md);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.submitBtn:hover {
+    background: var(--color-ocre);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+}
+
+.whatsappIcon {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .formContainer {
+        padding: var(--spacing-lg);
+        margin-top: var(--spacing-xl);
+        width: 90%;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+}

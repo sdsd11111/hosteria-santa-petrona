@@ -38,6 +38,67 @@
     box-shadow: var(--shadow-md);
 }
 
+@media (max-width: 768px) {
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .imageGrid {
+        order: 2;
+    }
+
+    .content {
+        order: 1;
+    }
+
+    /* MVV Cards as Carousel */
+    .mvvGrid {
+        display: flex !important;
+        flex-direction: row !important;
+        grid-template-columns: none !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-ocre) var(--color-crema);
+        max-width: 100vw;
+        margin-left: calc(-1 * var(--spacing-md));
+        margin-right: calc(-1 * var(--spacing-md));
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+        order: 3;
+        margin-top: var(--spacing-xl);
+    }
+
+    .mvvGrid::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .mvvGrid::-webkit-scrollbar-track {
+        background: var(--color-crema);
+        border-radius: 10px;
+    }
+
+    .mvvGrid::-webkit-scrollbar-thumb {
+        background: var(--color-ocre);
+        border-radius: 10px;
+    }
+
+    .mvvCard {
+        min-width: 85%;
+        max-width: 85%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+}
+
 @media (min-width: 768px) {
     .imageGrid {
         grid-template-columns: 1.5fr 1fr;

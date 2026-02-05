@@ -173,7 +173,40 @@
     .infoGrid {
         margin-top: -60px;
         /* Less overlap on mobile */
-        grid-template-columns: 1fr;
-        padding: 0 var(--spacing-md);
+        display: flex !important;
+        grid-template-columns: none !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-ocre) var(--color-crema);
+        max-width: 100vw;
+        margin-left: calc(-1 * var(--spacing-md));
+        margin-right: calc(-1 * var(--spacing-md));
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
+    .infoGrid::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .infoGrid::-webkit-scrollbar-track {
+        background: var(--color-crema);
+        border-radius: 10px;
+    }
+
+    .infoGrid::-webkit-scrollbar-thumb {
+        background: var(--color-ocre);
+        border-radius: 10px;
+    }
+
+    .infoCard {
+        min-width: 85%;
+        max-width: 85%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
     }
 }

@@ -184,15 +184,55 @@
 
 @media (max-width: 767px) {
     .hero {
-        padding-top: 120px;
+        padding-top: 100px;
+        min-height: 100vh;
+        padding-bottom: var(--spacing-xl);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .heroGrid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-sm);
     }
 
     .bgOverlay {
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .desktopOnly {
+        display: inline;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    .heroContent {
+        padding: 0;
+        text-align: center;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-lg);
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.9);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .features {
+        display: none;
+    }
+
+    .promoCard {
+        padding: var(--spacing-lg);
+        margin-top: -10px;
     }
 }

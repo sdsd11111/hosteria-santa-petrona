@@ -244,4 +244,17 @@
         text-align: center;
         gap: 0.5rem;
     }
+
+    .column {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logoSection {
+        justify-content: center;
+    }
+
+    .socialMedia {
+        justify-content: center;
+    }
 }
