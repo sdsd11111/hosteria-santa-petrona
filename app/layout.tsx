@@ -10,6 +10,9 @@ export const metadata = {
     alternates: {
         canonical: '/',
     },
+    verification: {
+        google: '6YdnTt3sUve1GTKyOxWnEtf0uHa1W69OqOI-6yt1uhQ',
+    },
     icons: {
         icon: '/favicon.png',
     },

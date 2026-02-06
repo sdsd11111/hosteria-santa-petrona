@@ -24,54 +24,14 @@ export default function HeroSection() {
 
         const timer = setInterval(() => {
             setCurrentImageIndex((prev) => (prev + 1) % HERO_IMAGES.length);
-        }, 5000); // Change image every 5 seconds
+        }, 5000);
 
         return () => clearInterval(timer);
     }, []);
 
     return (
-        <Suspense fallback={null}>
-            <HeroContent
-                isVisible={isVisible}
-                setIsVisible={setIsVisible}
-                currentImageIndex={currentImageIndex}
-                setCurrentImageIndex={setCurrentImageIndex}
-                isGiveawayOpen={isGiveawayOpen}
-                setIsGiveawayOpen={setIsGiveawayOpen}
-            />
-        </Suspense>
-    );
-}
-
-interface HeroContentProps {
-    isVisible: boolean;
-    setIsVisible: (v: boolean) => void;
-    currentImageIndex: number;
-    setCurrentImageIndex: (i: number) => void;
-    isGiveawayOpen: boolean;
-    setIsGiveawayOpen: (v: boolean) => void;
-}
-
-function HeroContent({
-    isVisible,
-    currentImageIndex,
-    isGiveawayOpen,
-    setIsGiveawayOpen
-}: HeroContentProps) {
-    const searchParams = useSearchParams();
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    useEffect(() => {
-        if (searchParams.get('sorteo') === 'abrir') {
-            setIsGiveawayOpen(true);
-        }
-    }, [searchParams, setIsGiveawayOpen]);
-
-
-
-    return (
         <section className={styles.hero}>
-            {/* Slider Background */}
+            {/* Slider Background - Always rendered to maintain height and visual continuity */}
             <div className={styles.bgWrapper}>
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -89,50 +49,14 @@ function HeroContent({
 
             <div className="container-wide">
                 <div className={styles.heroGrid}>
-                    {/* Left Column - Content */}
-                    <div className={`${styles.heroContent} ${isVisible ? 'animate-fade-in-up' : ''}`}>
-                        <h1 className={styles.title}>
-                            <span className={styles.highlight}>Hostería</span> en Quito <span className={styles.highlight}>Santa Petrona</span><span className={styles.desktopOnly}>: Tu mejor opción de hospedaje en el Norte.</span>
-                        </h1>
+                    <Suspense fallback={<HeroPlaceholder />}>
+                        <HeroDynamicContent
+                            isVisible={isVisible}
+                            setIsGiveawayOpen={setIsGiveawayOpen}
+                        />
+                    </Suspense>
 
-                        <div className={styles.subtitle}>
-                            <p className={styles.descriptionWhite}>
-                                Si buscas dónde hospedarse en Quito con ambiente campestre, estamos ubicados en Catzhuquí de Velasco, a solo 15 minutos del Condado Shopping.
-                                {isExpanded && (
-                                    <>
-                                        {' '}Disfruta de la mejor relación costo-beneficio con habitaciones desde $20, piscina olímpica temperada y áreas verdes. El escape perfecto cerca de la ciudad, sin complicaciones de transporte.
-                                    </>
-                                )}
-                            </p>
-                            <button
-                                onClick={() => setIsExpanded(!isExpanded)}
-                                className={styles.readMoreBtn}
-                            >
-                                {isExpanded ? 'Ocultar' : '... Seguir leyendo'}
-                            </button>
-                        </div>
-
-                        {/* CTA Removal as requested */}
-
-
-                        {/* Key Features */}
-                        <div className={styles.features}>
-                            <div className={styles.feature}>
-                                <span className={styles.featureIcon}>🏊</span>
-                                <span>Piscina Olímpica Temperada</span>
-                            </div>
-                            <div className={styles.feature}>
-                                <span className={styles.featureIcon}>🌳</span>
-                                <span>Entorno Natural</span>
-                            </div>
-                            <div className={styles.feature}>
-                                <span className={styles.featureIcon}>📍</span>
-                                <span>15 min del Condado</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column - Promo Card */}
+                    {/* Right Column - Promo Card (Always rendered) */}
                     <div className={`${styles.promoColumn} ${isVisible ? 'animate-fade-in' : ''}`}>
                         <div className={styles.promoCard}>
                             <h2 className={styles.promoTitle}>¡Gánate una Noche Gratis!</h2>
@@ -156,5 +80,78 @@ function HeroContent({
                 onClose={() => setIsGiveawayOpen(false)}
             />
         </section>
+    );
+}
+
+function HeroPlaceholder() {
+    return (
+        <div className={styles.heroContent} style={{ opacity: 0.5 }}>
+            <div className="h-12 w-3/4 bg-white/20 rounded animate-pulse mb-6"></div>
+            <div className="h-20 w-full bg-white/10 rounded animate-pulse mb-8"></div>
+            <div className="flex gap-4">
+                <div className="h-6 w-32 bg-white/20 rounded animate-pulse"></div>
+                <div className="h-6 w-32 bg-white/20 rounded animate-pulse"></div>
+            </div>
+        </div>
+    );
+}
+
+interface HeroDynamicContentProps {
+    isVisible: boolean;
+    setIsGiveawayOpen: (v: boolean) => void;
+}
+
+function HeroDynamicContent({
+    isVisible,
+    setIsGiveawayOpen
+}: HeroDynamicContentProps) {
+    const searchParams = useSearchParams();
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    useEffect(() => {
+        if (searchParams.get('sorteo') === 'abrir') {
+            setIsGiveawayOpen(true);
+        }
+    }, [searchParams, setIsGiveawayOpen]);
+
+    return (
+        <div className={`${styles.heroContent} ${isVisible ? 'animate-fade-in-up' : ''}`}>
+            <h1 className={styles.title}>
+                <span className={styles.highlight}>Hostería</span> en Quito <span className={styles.highlight}>Santa Petrona</span><span className={styles.desktopOnly}>: Tu mejor opción de hospedaje en el Norte.</span>
+            </h1>
+
+            <div className={styles.subtitle}>
+                <p className={styles.descriptionWhite}>
+                    Si buscas dónde hospedarse en Quito con ambiente campestre, estamos ubicados en Catzhuquí de Velasco, a solo 15 minutos del Condado Shopping.
+                    {isExpanded && (
+                        <>
+                            {' '}Disfruta de la mejor relación costo-beneficio con habitaciones desde $20, piscina olímpica temperada y áreas verdes. El escape perfecto cerca de la ciudad, sin complicaciones de transporte.
+                        </>
+                    )}
+                </p>
+                <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className={styles.readMoreBtn}
+                >
+                    {isExpanded ? 'Ocultar' : '... Seguir leyendo'}
+                </button>
+            </div>
+
+            {/* Key Features */}
+            <div className={styles.features}>
+                <div className={styles.feature}>
+                    <span className={styles.featureIcon}>🏊</span>
+                    <span>Piscina Olímpica Temperada</span>
+                </div>
+                <div className={styles.feature}>
+                    <span className={styles.featureIcon}>🌳</span>
+                    <span>Entorno Natural</span>
+                </div>
+                <div className={styles.feature}>
+                    <span className={styles.featureIcon}>📍</span>
+                    <span>15 min del Condado</span>
+                </div>
+            </div>
+        </div>
     );
 }

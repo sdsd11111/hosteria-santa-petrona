@@ -151,9 +151,61 @@
 }
 
 .nextBtn:disabled {
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: not-allowed;
-    background: var(--color-gray-400);
+    background: #e0e0e0;
+    color: #a0a0a0;
+    box-shadow: none;
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    background: #fdf2f2;
+    /* Very light tint of the brand color */
+    color: var(--color-ocre);
+    border: 2px solid var(--color-ocre);
+    padding: 1rem;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(212, 165, 116, 0.15);
+    font-size: 1.05rem;
+}
+
+.downloadBtn:hover {
+    background: var(--color-ocre);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 165, 116, 0.3);
+}
+
+.downloadBtn span {
+    font-size: 1.25rem;
+}
+
+@keyframes pulse-soft {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.highlightBtn {
+    animation: pulse-soft 2s infinite ease-in-out;
 }
 
 .optionsGrid {

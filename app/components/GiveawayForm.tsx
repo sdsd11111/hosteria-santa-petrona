@@ -42,6 +42,8 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
         preferenciaViaje: '',
         sugerencias: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
 
     const validateName = (name: string) => {
         return NAME_REGEX.test(name) && name.trim().split(/\s+/).length >= 2;
@@ -54,6 +56,29 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
 
     const handleDataChange = (field: keyof FormData, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
+    };
+
+    const handleSubmit = async () => {
+        setIsSubmitting(true);
+        setSubmitError(null);
+        try {
+            const response = await fetch('/api/giveaway', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                nextStep();
+            } else {
+                setSubmitError(data.message || 'Error al registrar. Inténtalo de nuevo.');
+            }
+        } catch (error) {
+            setSubmitError('Error de conexión. Verifica tu internet.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const resetForm = () => {
@@ -69,6 +94,8 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
         });
         setTermsAccepted(false);
         setDirection(0);
+        setIsSubmitting(false);
+        setSubmitError(null);
     };
 
     const variants = {
@@ -264,20 +291,24 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                                 <span className={styles.warningIcon}>⚠️</span>
                                 <p>
                                     <strong>Importante:</strong> Los ganadores serán contactados <u>únicamente por WhatsApp</u>.
-                                    Asegúrate de agregar nuestro número a tus contactos para recibir el premio:
-                                    <br />
-                                    <span className={styles.contactNumber}>+593 98 997 4420</span>
+                                    Asegúrate de guardar nuestro contacto para recibir la noticia si ganas:
                                 </p>
                             </div>
+
+                            <a href="/contacto.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
+                                <span>📥</span> Descargar contacto
+                            </a>
                         </div>
+
+                        {submitError && <p className={styles.errorText} style={{ color: '#d32f2f', fontSize: '0.875rem', marginTop: '0.5rem', textAlign: 'center' }}>{submitError}</p>}
 
                         <button
                             className={styles.nextBtn}
-                            disabled={!termsAccepted}
-                            onClick={nextStep}
+                            disabled={!termsAccepted || isSubmitting}
+                            onClick={handleSubmit}
                             style={{ marginTop: '1rem' }}
                         >
-                            ¡Participar en el Sorteo!
+                            {isSubmitting ? 'Registrando...' : '¡Participar en el Sorteo!'}
                         </button>
                     </div>
                 );
@@ -289,6 +320,16 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                         <p className={styles.successText}>
                             Gracias <strong>{formData.nombre}</strong>. Tus datos han sido registrados para el sorteo de la noche gratis.
                         </p>
+
+                        <div style={{ maxWidth: '300px', margin: '0 auto 1.5rem' }}>
+                            <p className={styles.successNote} style={{ marginBottom: '1rem' }}>
+                                <strong>¡No olvides guardarnos!</strong> Descarga nuestro contacto para saber si ganaste.
+                            </p>
+                            <a href="/contacto.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
+                                <span>📥</span> Descargar contacto
+                            </a>
+                        </div>
+
                         <p className={styles.successNote}>
                             Te contactaremos vía WhatsApp o correo electrónico si resultas ganador.
                             <br /><strong>Recuerda guardar nuestro número.</strong> 🏨✨
