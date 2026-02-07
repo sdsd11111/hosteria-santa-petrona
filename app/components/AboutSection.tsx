@@ -81,7 +81,7 @@ export default function AboutSection() {
                         <div className={styles.tertiaryImageWrapper}>
                             <Image
                                 src="/images/somos-3.webp"
-                                alt="Habitaciones campestres y descanso natural en Catzhuquí de Velasco"
+                                alt="Habitaciones campestres y descanso natural en Catzuqui de Velasco"
                                 fill
                                 className={styles.image}
                                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -97,7 +97,7 @@ export default function AboutSection() {
                         </h2>
 
                         <p className={styles.description}>
-                            Ubicada en la histórica Antigua Hacienda Catzhuquí de Velasco, <strong>Hostería Santa Petrona</strong> nace como el refugio ideal para quienes buscan dónde hospedarse en Quito sin alejarse del núcleo urbano. Nos especializamos en ofrecer una "microaventura" completa: un entorno rodeado de montañas y aire puro a solo 15 minutos del Condado Shopping.
+                            Ubicada en la histórica Antigua Hacienda Catzuqui de Velasco, <strong>Hostería Santa Petrona</strong> nace como el refugio ideal para quienes buscan dónde hospedarse en Quito sin alejarse del núcleo urbano. Nos especializamos en ofrecer una "microaventura" completa: un entorno rodeado de montañas y aire puro a solo 15 minutos del Condado Shopping.
                         </p>
 
                         <div className={styles.featuresList}>

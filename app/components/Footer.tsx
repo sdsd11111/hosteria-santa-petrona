@@ -26,7 +26,7 @@ export default function Footer() {
                         <div className={styles.nap}>
                             <p><strong>Dirección:</strong></p>
                             <p>Barrio Tenerías</p>
-                            <p>Antigua Hacienda Catzhuquí de Velasco</p>
+                            <p>Antigua Hacienda Catzuqui de Velasco</p>
                             <p>Quito, Ecuador</p>
                         </div>
                     </div>

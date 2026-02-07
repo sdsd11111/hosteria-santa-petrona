@@ -44,7 +44,7 @@ export default function VideoExperience() {
                     <div className={`${styles.overlay} ${isPlaying ? styles.overlayHidden : ''}`}>
                         <div className={styles.contentWrapper}>
                             <h2 className={styles.title}>
-                                Vive la Experiencia Santa Petrona en Catzhuquí de Velasco
+                                Vive la Experiencia Santa Petrona en Catzuqui de Velasco
                             </h2>
                             <p className={styles.description}>
                                 Descubre nuestro refugio natural a solo 15 minutos del norte de Quito.

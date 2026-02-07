@@ -122,7 +122,7 @@ function HeroDynamicContent({
 
             <div className={styles.subtitle}>
                 <p className={styles.descriptionWhite}>
-                    Si buscas dónde hospedarse en Quito con ambiente campestre, estamos ubicados en Catzhuquí de Velasco, a solo 15 minutos del Condado Shopping.
+                    Si buscas dónde hospedarse en Quito con ambiente campestre, estamos ubicados en Catzuqui de Velasco, a solo 15 minutos del Condado Shopping.
                     {isExpanded && (
                         <>
                             {' '}Disfruta de la mejor relación costo-beneficio con habitaciones desde $20, piscina olímpica temperada y áreas verdes. El escape perfecto cerca de la ciudad, sin complicaciones de transporte.

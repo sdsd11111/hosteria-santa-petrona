@@ -5,7 +5,7 @@ import './globals.css';
 export const metadata = {
     metadataBase: new URL('http://hosteriasantapetrona.com'),
     title: 'Hostería Santa Petrona - El mejor lugar donde hospedarse en Quito | Piscinas',
-    description: '¿Buscas hosterías en Quito? Santa Petrona es tu refugio campestre en Catzhuquí de Velasco. Habitaciones desde $20, piscina olímpica temperada y naturaleza a solo 15 min del Condado Shopping.',
+    description: '¿Buscas hosterías en Quito? Santa Petrona es tu refugio campestre en Catzuqui de Velasco. Habitaciones desde $20, piscina olímpica temperada y naturaleza a solo 15 min del Condado Shopping.',
     keywords: 'hostería en Quito, donde hospedarme en Quito, hospedaje en el norte de Quito, hosterías con piscina temperada, habitaciones baratas Quito, turismo campestre Quito, Santa Petrona Quito',
     alternates: {
         canonical: '/',
@@ -65,7 +65,7 @@ export default function RootLayout({
                                 "priceRange": "$20 - $60",
                                 "address": {
                                     "@type": "PostalAddress",
-                                    "streetAddress": "Barrio Tenerías, Antigua Hacienda Catzhuquí de Velasco",
+                                    "streetAddress": "Barrio Tenerías, Antigua Hacienda Catzuqui de Velasco",
                                     "addressLocality": "Quito",
                                     "addressRegion": "Pichincha",
                                     "postalCode": "170150",

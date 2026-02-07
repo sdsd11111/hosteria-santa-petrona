@@ -37,7 +37,7 @@ export default function Home() {
                 <h1>Hostería Santa Petrona | La mejor hostería en el Norte de Quito</h1>
                 <p>
                     Si buscas <strong>donde hospedarse en Quito</strong> o las mejores <strong>hosterías en Quito</strong> para disfrutar en familia,
-                    Hostería Santa Petrona es tu mejor opción en Catzhuquí de Velasco.
+                    Hostería Santa Petrona es tu mejor opción en Catzuqui de Velasco.
                 </p>
 
                 <h2>Servicios Destacados</h2>
@@ -54,7 +54,7 @@ export default function Home() {
                     Perfecto para turismo local, eventos corporativos y escapadas de fin de semana.
                 </p>
 
-                <p>Ubicación: Barrio Tenerías, Antigua Hacienda Catzhuquí de Velasco, Quito, Ecuador.</p>
+                <p>Ubicación: Barrio Tenerías, Antigua Hacienda Catzuqui de Velasco, Quito, Ecuador.</p>
                 <p>Contacto WhatsApp: +593 98 997 4420</p>
             </div>
         </main>

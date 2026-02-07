@@ -22,31 +22,31 @@ const ITEMS: ServiceItem[] = [
         id: 'matrimonial',
         category: 'hospedaje',
         title: 'Habitaciones Matrimoniales',
-        description: 'Privacidad y confort campestre para parejas o lunas de miel desde $40.00. Nuestras habitaciones matrimoniales están diseñadas para ofrecerte un descanso reparador con el toque rústico y acogedor que solo Santa Petrona puede brindar.',
+        description: 'Privacidad y confort campestre para parejas o lunas de miel desde $50.00. Nuestras habitaciones matrimoniales están diseñadas para ofrecerte un descanso reparador con el toque rústico y acogedor que solo Santa Petrona puede brindar. Beneficio: Acceso al día siguiente a piscina, sauna, turco y uso de asadero a precio preferencial de $5.',
         image: '/images/matrimonial.webp',
-        price: '$40.00',
+        price: '$50.00',
         size: 'large',
-        features: ['💑 Romántico', '📶 WiFi', '📺 TV Cable', '🚿 Baño Privado']
+        features: ['💑 Romántico', 'OLVIDA EL ESTRÉS', '🚿 Baño Privado', '🏊 Incluye Zonas Húmedas']
     },
     {
         id: 'familiar',
         category: 'hospedaje',
         title: 'Habitaciones Dobles y Múltiples',
-        description: 'Opciones dobles, triples y cuádruples ideales para familias y grupos que buscan compartir momentos inolvidables en un entorno natural y seguro.',
+        description: 'Opciones dobles con cama de 2 plazas, ideales para familias y grupos. Disfruta de un entorno natural y seguro. Beneficio: Acceso al día siguiente a piscina, sauna, turco y uso de asadero a precio preferencial de $5.',
         image: '/images/dobles.webp',
-        price: '$20.00 / pers',
+        price: '$25.00 / pers',
         size: 'normal',
-        features: ['👨‍👩‍👧‍👦 Familiar', '🧼 Confort', '🚿 Baño Privado', '📶 WiFi']
+        features: ['🛏️ Cama 2 Plazas', '👨‍👩‍👧‍👦 Familiar', '🚿 Baño Privado', '🏊 Incluye Zonas Húmedas']
     },
     {
         id: 'por-persona',
         category: 'hospedaje',
         title: 'Hospedaje por Persona',
-        description: 'Nuestra opción más versátil y económica para viajeros solitarios, mochileros o delegaciones que buscan calidad y ahorro.',
+        description: 'Nuestra opción más versátil y económica con 4 camas de 1 plaza. Ideal para viajeros solitarios, mochileros o delegaciones. Beneficio: Acceso al día siguiente a piscina, sauna, turco y uso de asadero a precio preferencial de $5.',
         image: '/images/por persona.webp',
         price: '$20.00',
         size: 'normal',
-        features: ['💰 Económico', '👥 Grupos', '✨ Versátil', '🍽️ Acceso a áreas']
+        features: ['🛏️ 4 Camas de 1 plaza', '💰 Económico', '👥 Grupos', '🏊 Incluye Zonas Húmedas']
     },
 
     // Piscinas y Spa (Bienestar)
@@ -119,7 +119,7 @@ const ITEMS: ServiceItem[] = [
         id: 'aventura-4',
         category: 'aventuras',
         title: 'Áreas de Camping',
-        description: 'Para los más aventureros, ofrecemos zonas seguras para acampar bajo el cielo estrellado de Catzhuquí, con acceso a servicios básicos.',
+        description: 'Para los más aventureros, ofrecemos zonas seguras para acampar bajo el cielo estrellado de Catzuqui, con acceso a servicios básicos.',
         image: '/images/aventura-4.webp',
         size: 'normal',
         features: ['⛺ Camping', '🔥 Fogatas', '🌌 Estrellas', '🔦 Aventura']

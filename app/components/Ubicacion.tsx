@@ -25,7 +25,7 @@ export default function Ubicacion() {
                     <span className={styles.label}>Encuéntranos</span>
                     <h2 className={styles.title}>Ubicación</h2>
                     <p className={styles.description}>
-                        A pocos minutos de Quito, en el tranquilo sector de Catzhuquí de Velasco
+                        A pocos minutos de Quito, en el tranquilo sector de Catzuqui de Velasco
                     </p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default function Ubicacion() {
                         <h3 className={styles.infoTitle}>Dirección</h3>
                         <p className={styles.infoText}>
                             Barrio Tenerías<br />
-                            Antigua Hacienda Catzhuquí de Velasco<br />
+                            Antigua Hacienda Catzuqui de Velasco<br />
                             Quito, Ecuador
                         </p>
                         <button onClick={handleDireccionesClick} className="btn btn-secondary">

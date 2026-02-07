@@ -12,7 +12,7 @@ interface FaqItem {
 const FAQ_ITEMS: FaqItem[] = [
     {
         question: "¿Cómo llegar a la Hostería Santa Petrona desde el norte de Quito?",
-        answer: "Estamos ubicados en la Antigua Hacienda Catzhuquí de Velasco, sector norte. Puedes llegar fácilmente en vehículo propio (a solo 15 minutos del Condado Shopping) o mediante transporte público tomando los alimentadores desde la Terminal La Ofelia hacia el Barrio Tenerías."
+        answer: "Estamos ubicados en la Antigua Hacienda Catzuqui de Velasco, sector norte. Puedes llegar fácilmente en vehículo propio (a solo 15 minutos del Condado Shopping) o mediante transporte público tomando los alimentadores desde la Terminal La Ofelia hacia el Barrio Tenerías."
     },
     {
         question: "¿La piscina es temperada y está disponible si llueve?",

@@ -65,7 +65,7 @@ export default function Map() {
                     <Popup>
                         <div style={{ textAlign: 'center' }}>
                             <strong style={{ color: '#5d4037', fontSize: '1.1rem' }}>Hostería Santa Petrona</strong><br />
-                            <span style={{ color: '#757575' }}>Barrio Tenerías, Catzhuquí de Velasco</span><br />
+                            <span style={{ color: '#757575' }}>Barrio Tenerías, Catzuqui de Velasco</span><br />
                             <span style={{ color: '#757575' }}>Quito, Ecuador</span>
                         </div>
                     </Popup>
