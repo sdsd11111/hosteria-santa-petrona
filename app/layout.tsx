@@ -60,6 +60,7 @@ export default function RootLayout({
                                 "name": "Hostería Santa Petrona",
                                 "description": "La mejor hostería en el norte de Quito con piscina olímpica temperada, áreas verdes y cabalgatas.",
                                 "image": "http://hosteriasantapetrona.com/logo.png",
+                                "logo": "http://hosteriasantapetrona.com/logo.png",
                                 "url": "http://hosteriasantapetrona.com",
                                 "telephone": "+593989974420",
                                 "priceRange": "$20 - $60",
