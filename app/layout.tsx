@@ -3,7 +3,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './globals.css';
 
 export const metadata = {
-    metadataBase: new URL('http://hosteriasantapetrona.com'),
+    metadataBase: new URL('https://hosteriasantapetrona.com'),
     title: 'Hostería Santa Petrona - El mejor lugar donde hospedarse en Quito | Piscinas',
     description: '¿Buscas hosterías en Quito? Santa Petrona es tu refugio campestre en Catzuqui de Velasco. Habitaciones desde $20, piscina olímpica temperada y naturaleza a solo 15 min del Condado Shopping.',
     keywords: 'hostería en Quito, donde hospedarme en Quito, hospedaje en el norte de Quito, hosterías con piscina temperada, habitaciones baratas Quito, turismo campestre Quito, Santa Petrona Quito',
@@ -15,11 +15,12 @@ export const metadata = {
     },
     icons: {
         icon: '/favicon.png',
+        apple: '/favicon.png',
     },
     openGraph: {
         title: 'Hostería Santa Petrona - Hostería en Quito con Piscina Temperada',
         description: 'Disfruta de la mejor hostería en el norte de Quito. Piscina olímpica, cabalgatas y confort desde $20 por persona.',
-        url: 'http://hosteriasantapetrona.com',
+        url: 'https://hosteriasantapetrona.com',
         siteName: 'Hostería Santa Petrona',
         images: [
             {
@@ -56,12 +57,12 @@ export default function RootLayout({
                             {
                                 "@context": "https://schema.org",
                                 "@type": "Hotel",
-                                "@id": "http://hosteriasantapetrona.com/#hotel",
+                                "@id": "https://hosteriasantapetrona.com/#hotel",
                                 "name": "Hostería Santa Petrona",
                                 "description": "La mejor hostería en el norte de Quito con piscina olímpica temperada, áreas verdes y cabalgatas.",
-                                "image": "http://hosteriasantapetrona.com/logo.png",
-                                "logo": "http://hosteriasantapetrona.com/logo.png",
-                                "url": "http://hosteriasantapetrona.com",
+                                "image": "https://hosteriasantapetrona.com/logo.png",
+                                "logo": "https://hosteriasantapetrona.com/logo.png",
+                                "url": "https://hosteriasantapetrona.com",
                                 "telephone": "+593989974420",
                                 "priceRange": "$20 - $60",
                                 "address": {
@@ -107,8 +108,8 @@ export default function RootLayout({
                                 "@context": "https://schema.org",
                                 "@type": "Organization",
                                 "name": "Hostería Santa Petrona",
-                                "url": "http://hosteriasantapetrona.com",
-                                "logo": "http://hosteriasantapetrona.com/logo.png",
+                                "url": "https://hosteriasantapetrona.com",
+                                "logo": "https://hosteriasantapetrona.com/logo.png",
                                 "sameAs": [
                                     "https://www.facebook.com/profile.php?id=100063551562356&locale=es_LA",
                                     "https://www.instagram.com/hosteria_santa_petrona/",
