@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'http://hosteriasantapetrona.com/sitemap.xml',
+        sitemap: 'https://www.hosteriasantapetrona.com/sitemap.xml',
     };
 }

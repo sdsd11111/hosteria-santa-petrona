@@ -3,9 +3,9 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './globals.css';
 
 export const metadata = {
-    metadataBase: new URL('https://hosteriasantapetrona.com'),
+    metadataBase: new URL('https://www.hosteriasantapetrona.com'),
     title: 'Hostería Santa Petrona - El mejor lugar donde hospedarse en Quito | Piscinas',
-    description: '¿Buscas hosterías en Quito? Santa Petrona es tu refugio campestre en Catzuqui de Velasco. Habitaciones desde $20, piscina olímpica temperada y naturaleza a solo 15 min del Condado Shopping.',
+    description: '¿Buscas hosterías en Quito? Santa Petrona es tu refugio campestre en Catzuqui de Velasco. Habitaciones desde $20, piscina semi olímpica temperada y naturaleza a solo 15 min del Condado Shopping.',
     keywords: 'hostería en Quito, donde hospedarme en Quito, hospedaje en el norte de Quito, hosterías con piscina temperada, habitaciones baratas Quito, turismo campestre Quito, Santa Petrona Quito',
     alternates: {
         canonical: '/',
@@ -14,13 +14,19 @@ export const metadata = {
         google: '6YdnTt3sUve1GTKyOxWnEtf0uHa1W69OqOI-6yt1uhQ',
     },
     icons: {
-        icon: '/favicon.png',
+        icon: [
+            { url: '/favicon.png' },
+            { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+            { url: '/favicon-96.png', sizes: '96x96', type: 'image/png' },
+            { url: '/favicon-144.png', sizes: '144x144', type: 'image/png' },
+            { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+        ],
         apple: '/favicon.png',
     },
     openGraph: {
-        title: 'Hostería Santa Petrona - Hostería en Quito con Piscina Temperada',
-        description: 'Disfruta de la mejor hostería en el norte de Quito. Piscina olímpica, cabalgatas y confort desde $20 por persona.',
-        url: 'https://hosteriasantapetrona.com',
+        title: 'Hostería Santa Petrona - Hostería en Quito con Piscina Semi Olímpica Temperada',
+        description: 'Disfruta de la mejor hostería en el norte de Quito. Piscina semi olímpica, cabalgatas y confort desde $20 por persona.',
+        url: 'https://www.hosteriasantapetrona.com',
         siteName: 'Hostería Santa Petrona',
         images: [
             {
@@ -36,7 +42,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Hostería Santa Petrona - Tu mejor opción de hospedaje en Quito',
-        description: 'Piscina temperada, áreas verdes y habitaciones confortables en el norte de Quito.',
+        description: 'Piscina semi olímpica temperada, áreas verdes y habitaciones confortables en el norte de Quito.',
         images: ['/logo.png'],
     },
 };
@@ -57,12 +63,12 @@ export default function RootLayout({
                             {
                                 "@context": "https://schema.org",
                                 "@type": "Hotel",
-                                "@id": "https://hosteriasantapetrona.com/#hotel",
+                                "@id": "https://www.hosteriasantapetrona.com/#hotel",
                                 "name": "Hostería Santa Petrona",
-                                "description": "La mejor hostería en el norte de Quito con piscina olímpica temperada, áreas verdes y cabalgatas.",
-                                "image": "https://hosteriasantapetrona.com/logo.png",
-                                "logo": "https://hosteriasantapetrona.com/logo.png",
-                                "url": "https://hosteriasantapetrona.com",
+                                "description": "La mejor hostería en el norte de Quito con piscina semi olímpica temperada, áreas verdes y cabalgatas.",
+                                "image": "https://www.hosteriasantapetrona.com/logo.png",
+                                "logo": "https://www.hosteriasantapetrona.com/logo.png",
+                                "url": "https://www.hosteriasantapetrona.com",
                                 "telephone": "+593989974420",
                                 "priceRange": "$20 - $60",
                                 "address": {
@@ -94,11 +100,11 @@ export default function RootLayout({
                                         "@type": "Review",
                                         "author": { "@type": "Person", "name": "Carlos Villacís" },
                                         "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                                        "reviewBody": "El lugar perfecto para ir con niños. La piscina olímpica cubierta es un éxito total, agua siempre temperada."
+                                        "reviewBody": "El lugar perfecto para ir con niños. La piscina semi olímpica cubierta es un éxito total, agua siempre temperada."
                                     }
                                 ],
                                 "amenityFeature": [
-                                    { "@type": "LocationFeatureSpecification", "name": "Piscina olímpica temperada", "value": true },
+                                    { "@type": "LocationFeatureSpecification", "name": "Piscina semi olímpica temperada", "value": true },
                                     { "@type": "LocationFeatureSpecification", "name": "Cabalgatas", "value": true },
                                     { "@type": "LocationFeatureSpecification", "name": "Senderismo", "value": true },
                                     { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratis", "value": true }
@@ -108,13 +114,19 @@ export default function RootLayout({
                                 "@context": "https://schema.org",
                                 "@type": "Organization",
                                 "name": "Hostería Santa Petrona",
-                                "url": "https://hosteriasantapetrona.com",
-                                "logo": "https://hosteriasantapetrona.com/logo.png",
+                                "url": "https://www.hosteriasantapetrona.com",
+                                "logo": "https://www.hosteriasantapetrona.com/logo.png",
                                 "sameAs": [
                                     "https://www.facebook.com/profile.php?id=100063551562356&locale=es_LA",
                                     "https://www.instagram.com/hosteria_santa_petrona/",
                                     "https://www.tiktok.com/@hosteria_santa_petrona"
                                 ]
+                            },
+                            {
+                                "@context": "https://schema.org",
+                                "@type": "WebSite",
+                                "name": "Hostería Santa Petrona",
+                                "url": "https://www.hosteriasantapetrona.com"
                             }
                         ])
                     }}

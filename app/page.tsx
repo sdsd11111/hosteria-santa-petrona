@@ -42,7 +42,7 @@ export default function Home() {
 
                 <h2>Servicios Destacados</h2>
                 <ul>
-                    <li><strong>Piscina Olímpica Temperada:</strong> Agua a 28°C ideal para niños y adultos.</li>
+                    <li><strong>Piscina Semi Olímpica Temperada:</strong> Agua a 28°C ideal para niños y adultos.</li>
                     <li><strong>Hospedaje Económico:</strong> Habitaciones confortables desde $20 por persona.</li>
                     <li><strong>Naturaleza y Aire Puro:</strong> El refugio campestre más cercano al norte de la ciudad.</li>
                     <li><strong>Actividades:</strong> Cabalgatas, senderismo, zonas BBQ y canchas deportivas.</li>

@@ -16,7 +16,7 @@ const FAQ_ITEMS: FaqItem[] = [
     },
     {
         question: "¿La piscina es temperada y está disponible si llueve?",
-        answer: "Sí, contamos con una piscina olímpica que es totalmente cubierta y temperada. Esto garantiza que nuestros huéspedes puedan disfrutar del complejo acuático, el sauna y el turco sin importar las condiciones climáticas de la ciudad."
+        answer: "Sí, contamos con una piscina semi olímpica que es totalmente cubierta y temperada. Esto garantiza que nuestros huéspedes puedan disfrutar del complejo acuático, el sauna y el turco sin importar las condiciones climáticas de la ciudad."
     },
     {
         question: "¿Cuáles son los precios de hospedaje y qué incluyen?",

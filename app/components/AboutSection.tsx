@@ -32,7 +32,7 @@ export default function AboutSection() {
     const features = [
         {
             title: "Complejo Acuático",
-            description: "Piscina olímpica cubierta, sauna, turco e hidromasaje.",
+            description: "Piscina semi olímpica cubierta, sauna, turco e hidromasaje.",
             icon: "💧"
         },
         {

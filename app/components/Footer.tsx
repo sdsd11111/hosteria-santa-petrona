@@ -36,7 +36,7 @@ export default function Footer() {
                         <h4 className={styles.columnTitle}>Enlaces Rápidos</h4>
                         <ul className={styles.linkList}>
                             <li>
-                                <a href="#servicios-habitaciones" className={styles.link} title="Piscina olímpica, sauna y bienestar">Servicios de Bienestar</a>
+                                <a href="#servicios-habitaciones" className={styles.link} title="Piscina semi olímpica, sauna y bienestar">Servicios de Bienestar</a>
                             </li>
                             <li>
                                 <a href="#servicios-habitaciones" className={styles.link} title="Habitaciones desde $20 en Quito">Habitaciones y Tarifas</a>

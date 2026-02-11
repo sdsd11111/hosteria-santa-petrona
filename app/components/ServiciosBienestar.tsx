@@ -4,8 +4,8 @@ export default function ServiciosBienestar() {
     const servicios = [
         {
             icon: '🏊‍♂️',
-            title: 'Piscina Olímpica Cubierta',
-            description: 'Nuestra piscina temperada de tamaño olímpico te espera todo el año, sin importar el clima.'
+            title: 'Piscina Semi Olímpica Cubierta',
+            description: 'Nuestra piscina temperada de tamaño semi olímpico te espera todo el año, sin importar el clima.'
         },
         {
             icon: '🌡️',

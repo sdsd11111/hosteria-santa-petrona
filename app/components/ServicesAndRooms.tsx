@@ -53,11 +53,11 @@ const ITEMS: ServiceItem[] = [
     {
         id: 'piscina-principal',
         category: 'bienestar',
-        title: 'Piscina Olímpica Temperada',
-        description: 'Nuestra joya arquitectónica: una piscina con dimensiones olímpicas y agua temperada mecánicamente los 365 días del año. Ideal para entrenamiento o pura diversión familiar.',
+        title: 'Piscina Semi Olímpica Temperada',
+        description: 'Nuestra joya arquitectónica: una piscina con dimensiones semi olímpicas y agua temperada mecánicamente los 365 días del año. Ideal para entrenamiento o pura diversión familiar.',
         image: '/images/piscina-1.webp',
         size: 'large',
-        features: ['🏊 Olímpica', '🔥 Temperada', '📐 Profundidad oficial', '🧤 Cubierta']
+        features: ['🏊 Semi Olímpica', '🔥 Temperada', '📐 Profundidad oficial', '🧤 Cubierta']
     },
     {
         id: 'piscina-infantil',

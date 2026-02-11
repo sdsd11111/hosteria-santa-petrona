@@ -125,7 +125,7 @@ function HeroDynamicContent({
                     Si buscas dónde hospedarse en Quito con ambiente campestre, estamos ubicados en Catzuqui de Velasco, a solo 15 minutos del Condado Shopping.
                     {isExpanded && (
                         <>
-                            {' '}Disfruta de la mejor relación costo-beneficio con habitaciones desde $20, piscina olímpica temperada y áreas verdes. El escape perfecto cerca de la ciudad, sin complicaciones de transporte.
+                            {' '}Disfruta de la mejor relación costo-beneficio con habitaciones desde $20, piscina semi olímpica temperada y áreas verdes. El escape perfecto cerca de la ciudad, sin complicaciones de transporte.
                         </>
                     )}
                 </p>
@@ -141,7 +141,7 @@ function HeroDynamicContent({
             <div className={styles.features}>
                 <div className={styles.feature}>
                     <span className={styles.featureIcon}>🏊</span>
-                    <span>Piscina Olímpica Temperada</span>
+                    <span>Piscina Semi Olímpica Temperada</span>
                 </div>
                 <div className={styles.feature}>
                     <span className={styles.featureIcon}>🌳</span>

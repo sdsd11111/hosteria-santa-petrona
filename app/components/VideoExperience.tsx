@@ -63,7 +63,7 @@ export default function VideoExperience() {
                     <div className={styles.badgesContainer}>
                         <div className={styles.badge}>
                             <span className={styles.badgeIcon}>🏊</span>
-                            Piscina Olímpica Temperada
+                            Piscina Semi Olímpica Temperada
                         </div>
                         <div className={styles.badge}>
                             <span className={styles.badgeIcon}>📍</span>

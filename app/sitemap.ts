@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'http://hosteriasantapetrona.com';
+    const baseUrl = 'https://www.hosteriasantapetrona.com';
 
     return [
         {
