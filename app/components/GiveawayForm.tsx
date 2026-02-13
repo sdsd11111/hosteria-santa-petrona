@@ -295,7 +295,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                                 </p>
                             </div>
 
-                            <a href="/contacto.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
+                            <a href="/Hosteria santa petrona.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
                                 <span>📥</span> Descargar contacto
                             </a>
                         </div>
