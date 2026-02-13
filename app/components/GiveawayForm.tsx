@@ -295,7 +295,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                                 </p>
                             </div>
 
-                            <a href="/Hosteria santa petrona.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
+                            <a href="/HosteriaSantaPetrona.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
                                 <span>📥</span> Descargar contacto
                             </a>
                         </div>
@@ -325,7 +325,7 @@ export default function GiveawayForm({ isOpen, onClose }: GiveawayFormProps) {
                             <p className={styles.successNote} style={{ marginBottom: '1rem' }}>
                                 <strong>¡No olvides guardarnos!</strong> Descarga nuestro contacto para saber si ganaste.
                             </p>
-                            <a href="/contacto.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
+                            <a href="/HosteriaSantaPetrona.vcf" download="Hostería Santa Petrona.vcf" className={`${styles.downloadBtn} ${styles.highlightBtn}`}>
                                 <span>📥</span> Descargar contacto
                             </a>
                         </div>
